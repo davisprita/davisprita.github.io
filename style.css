@@ -1,0 +1,822 @@
+/* --- style.css --- */
+
+/*Scroll up button*/
+#scrollTop {
+    display: none; /*Hidden until you scroll down*/
+    position: fixed; /*Stays in right hand corner when scrolling*/
+    bottom: 30px;
+    right: 30px;
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*Body styles*/
+body {
+    font-family: 'Times New Roman', Times, serif; /*Default font for the whole site*/
+    margin: 0; /*Removes the default browser margin*/
+}
+
+/*pops up as drak tranparent background and is centered*/
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Main popup box*/
+.popup_box {
+    background-color: darkslategray;
+    padding: 35px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+}
+
+/*popup heading*/
+.popup_box h2 {
+    color: gold;
+    margin-bottom: 20px;
+}
+
+/*input fields*/
+.popup_box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 2px solid gold;
+    box-sizing: border-box;
+}
+
+/*Main sign in button*/
+.popup_box button {
+    width: 100%;
+    padding: 12px;
+    background-color: gold;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius:5px ;
+}
+
+/*Changes color to white when you hover*/
+.popup_box button:hover {
+    background-color: white;
+}
+
+/*Continue as guest button*/
+.guest {
+    margin-top: 10px;
+    background-color: white;
+    color: darkslategray;
+}
+
+/*Hover effects for guest button*/
+.guest:hover {
+    background-color: gold;
+}
+
+/*Header bar at the top part*/
+header {
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between; /*Makes it so that the logos on the left while the navs on the right*/
+    align-items: center;
+    height: 90px;
+}
+
+/*Making the logo a bigger so it perfectly fits into the header*/
+.logo img {
+    height: 110px;
+}
+
+/*Nav link styles*/
+nav a {
+    display: inline-block;
+    margin: 20px;
+    color: gold;
+    font-size: 20px;
+}
+
+/*Main section with background image*/
+#main {
+    padding: 40px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('Images/headingpic.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+/*Style for the heading in main*/
+.main_text h2 {
+    font-family: cursive;
+    font-size: 60px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+/*Style for the text in main*/
+.main_text p {
+    font-family: cursive;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: whitesmoke;
+
+}
+
+/*Style for the golden button in main*/
+.main_button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none; /*Removes the underline*/
+}
+
+/*This chages the color form golden to white while hovering over the button*/
+.main_button:hover {
+    background-color: white;
+    color: darkslategray;
+}
+
+/*Mobile styles for header and main*/
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column; /*Stacks the logo above nav*/
+        height: auto;
+        padding: 15px 20px;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 13px; /*Smaller links on mobile*/
+        margin: 0 5px;
+    }
+
+    .main_text h2 {
+        font-size: 36px; /*Smaller heading on mobile*/
+    }
+
+    #main {
+        justify-content: center;
+        text-align: center;
+        padding: 80px 20px 60px;
+    }
+
+    .main_text p {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+/*3 popular destination section*/
+.destination {
+    padding: 50px 20px;
+    background-color: antiquewhite;
+}
+
+.destination h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: darkslategray;
+    text-align: center;
+}
+
+/*Search bar box or like container*/
+.search_bar {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+/*The words that the user inputs*/
+.search_bar input {
+    padding: 12px 20px;
+    width: 60%;
+    border: 2px solid gold;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/*Flex container for all the cards*/
+.showcases {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /*warps to the next line on smaller screens*/
+    padding: 20px;
+}
+
+/*Single destinations*/
+.showcase {
+    width: 360px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden; /* stops the images from overflowing the rounded corners*/
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+/*Increases the size of the card while hovering over it*/
+.showcase:hover {
+    transform: scale(1.09);
+}
+
+/*Destination image fills the top of the card*/
+.showcase img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /*To crop it nicely without stretching it*/
+}
+
+.showcase h3 {
+    margin: 10px;
+    color: darkslategray;
+}
+
+.showcase p {
+    padding: 0 10px 10px;
+    color: dimgray;
+    font-size: 14px;
+}
+
+/*Golden button at the end of each card*/
+.showcase button {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+/*This changes the color of the button while u hover over it*/
+.showcase button:hover {
+    background-color: darkslategray;
+    color: gold;
+}
+
+/*Full width cards on small screens*/
+@media screen and (max-width: 650px) {
+    .showcase {
+        width: 90%;
+    }
+}
+
+/*Why choose us section*/
+.why_us {
+    padding: 60px 20px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.why_us h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: darkslategray;
+}
+/*Flex row of the 3 reasons*/
+.why_boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/*The individual reason box*/
+.why_box {
+    width: 280px;
+    background-color: cadetblue;
+    border-top: 4px solid gold;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+/*The box lifts up slighty while hovering over it*/
+.why_box:hover {
+    transform: translateY(-5px);
+}
+
+.why_box h3 {
+    margin-bottom: 10px;
+    color: darkslategray;
+}
+
+.why_box p {
+    color: white;
+}
+
+/*Stacks boxes on small screens*/
+@media screen and (max-width: 650px) {
+    .why_boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why_box {
+        width: 90%;
+    }
+}
+
+/*Customer reviews section*/
+.reviews {
+    padding: 60px 20px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: darkslategray;
+}
+
+/*Helps to stack the reviews vertically*/
+.reviews_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 10px;
+}
+
+/*Individual review card*/
+.review {
+    width: 90%;
+    background-color: darkslategray;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+/*Slightly lifts the review card while hovering over it*/
+.review:hover {
+    transform: translateY(-8px);
+}
+
+.review p {
+    font-size: 20px;
+    color: whitesmoke;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.review h4 {
+    color: gold;
+    font-weight: bold;
+}
+
+/*Smaller text on mobile*/
+@media screen and (max-width: 768px) {
+    .review p {
+        font-size: 16px;
+    }
+}
+
+/*Join community section*/
+.join_coms {
+    background-color: dimgray;
+    padding: 60px 20px;
+}
+
+/*To center and constrain the content*/
+.join_com {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.join_com_tag {
+    display: inline-block;
+    background-color: gold;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.join_com_text h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.join_com_text p {
+    color: lightgray;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/*Stackes the input and button*/
+.info_input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 480px;
+}
+
+/*Email input field*/
+.info_input input {
+    padding: 14px 18px;
+    border: 2px solid gold;
+    border-radius: 6px;
+    background-color: dimgray;
+    color: white;
+    font-size: 16px;
+}
+
+/*Placeholder text*/
+.info_input input::placeholder {
+    color: white;
+}
+
+/*Brder goes white when focused*/
+.info_input input:focus {
+    border-color: white;
+}
+
+/*Subscribe button*/
+.info_input button {
+    padding: 14px;
+    background-color: gold;
+    color: black;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Button changes to white when hovering over it*/ 
+.info_input button:hover {
+    background-color: white;
+    color: darkslategray;
+}
+
+/*note under the form*/ 
+.join_com_note {
+    color: white;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/*On wider screen the sections lay out side by side*/
+@media screen and (min-width: 768px) {
+    .join_com {
+        flex-direction: row; /*Text on the left while the form on the right*/
+        justify-content: space-between;
+        text-align: left;
+        align-items: center;
+    }
+
+    /*Making it take have the space*/
+    .join_com_text {
+        flex: 1;
+    }
+
+    .join_com_form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /*Pushes the form to the right*/
+    }
+
+    /*Side by side imput and button on desktop*/
+    .info_input {
+        flex-direction: row;
+    }
+
+    .info_input input {
+        flex-grow: 1;
+        width: 70%; /*Making input take most of the space*/
+    }
+
+    .info_input button {
+        width: 30%; 
+    }
+}
+
+/*footer*/
+footer {
+    background-color: darkslategray;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer_name {
+    color: gold;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer h4 {
+    color: gold;
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+footer p {
+    color: darkgray;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*Individual social media link*/
+.social_media_icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 8px;
+    color: darkgray;
+    font-size: 14px;
+}
+
+/*row of the social media icons*/
+.social_media_icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*icon turns to gold while hovering over it*/ 
+.social_media_icon:hover {
+    color: gold;
+}
+
+/*For the copyright part*/
+.last {
+    margin-top: 20px;
+    padding-top: 15px;
+    color: darkgray;
+    font-size: 13px;
+}
+
+/*Wraps the social media icons on the small screens*/
+@media screen and (max-width: 768px) {
+
+    .social_media_icons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .social_media_icon {
+        justify-content: center;
+    }
+
+    .social_media_icon img {
+        width: 24px; /*Smaller icons on mobile*/
+        height: 24px;
+    }
+}
+
+/*Makes the price package cards bold*/
+.package_price {
+    padding: 0 10px;
+    font-weight: bolder;
+    color: black;
+    font-size: 15px;
+}
+
+/*For the the 4 boxes in tour overview section*/
+.tour_overview {
+    padding: 50px 20px;
+    background-color: whitesmoke;
+}
+
+.tour_overview h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: darkslategray;
+}
+
+/*Flexs the row of the info boxes*/
+.tour_info_boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/*Individual info box*/
+.tour_info_box {
+    width: 200px;
+    background-color: darkslategray;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid gold;
+}
+
+.tour_info_box h3 {
+    color: gold;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.tour_info_box p {
+    color: whitesmoke;
+    font-size: 14px;
+}
+
+/*What the tour includes section*/
+.tour_includes {
+    padding: 50px 20px;
+    background-color: antiquewhite;
+}
+
+.tour_includes h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: darkslategray;
+}
+
+/*Flexs the row of included boxes*/
+.includes_boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/*Indidual box*/
+.includes_box {
+    width: 220px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid gold;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.includes_box h3 {
+    color: darkslategray;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.includes_box p {
+    color: dimgray;
+    font-size: 14px;
+}
+
+/*Itinerary section*/
+.itinerary {
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.itinerary h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: darkslategray;
+    text-align: center;
+}
+
+/*Vertical stack of day rows*/
+.itinerary_days {
+    max-width: 750px;
+    margin: 0 auto; /*centers it*/
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*Individual day row*/
+.itinerary_day {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid gold;
+    text-align: left;
+}
+
+/*For the day number on the left*/
+.day_number {
+    background-color: darkslategray;
+    color: gold;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.day_details h3 {
+    color: darkslategray;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.day_details p {
+    color: dimgray;
+    font-size: 16px;
+}
+/*Youtube embeded video section*/
+.tour_vid {
+    padding: 10px 20px 50px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+.tour_vid h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: darkslategray;
+}
+
+.tour_vid p {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+/*responsive iframe wrapper*/
+.vid_edit {
+    position: relative;
+    padding-bottom: 40%;
+    height: 0;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/*Iframe fills the wrapper*/
+.vid_edit iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Stacks the boxes and itinerary rows in the small screens*/
+@media screen and (max-width: 650px) {
+    .includes_box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .itinerary_day {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/*Enquiry section*/
+.enquiry_input {
+    flex-direction: column; /*day number goes above the text*/
+    max-width: 400px;
+}
+
+/*Makes the inputs and button full width in the enquiry form*/
+.enquiry_input input,
+.enquiry_input button {
+    width: 100%;
+}

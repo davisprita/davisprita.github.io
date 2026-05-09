@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christ Travels</title>
+    <!--Links to my CSS file-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--PopUp shows up as soon as the website opens-->
+    <div id="signinpop" class="popup">
+    
+        <div class="popup_box"> <!--Main popup box-->
+
+            <h2>Sign In</h2> <!--Heading-->
+
+            <input type="email" id="signinEmail" placeholder="Enter Your Email"> <!--Input of mail id-->
+
+            <input type="password" id="signin_pass" placeholder="Enter Your Password"> <!--Input of password-->
+
+            <button onclick="closePopup()">Sign In</button> <!--Sign button-->
+
+            <button onclick="closePopup()" class="guest">Continue as a Guest</button> <!--This allows users to skip sign in-->
+            
+        </div>
+
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="Images/logo.png" alt="Christ Travels Logo"> <!--My logo-->
+        </div>
+
+        <!--Nav links-->
+        <nav>
+            <a href="index.html">Home</a> <!--This page-->
+            <a href="packages.html">Packages</a> <!--Package Page-->
+            <a href="dedicated_tour.html">Holy Tour</a> <!--Holy Tour Page-->
+            <a href="#">Flights</a> <!--Empty Page-->
+            <a href="#">About Us</a> <!--Empty Page-->
+        </nav>
+    </header>
+
+    <main>
+
+        <!--Start of the main section-->
+        <section id="main">
+            <div class="main_text">
+                <h2>Guided By Wonder</h2> <!--Main heading-->
+                <p>Explore amazing destinations and unforgettable experiences with Christ Travels.</p> <!--Tagline-->
+                <a href="packages.html" class="main_button">Explore Now</a> <!--A button linking to the package page-->
+
+            </div>
+        </section>
+
+        <!--3 Pupular destination cards-->
+        <section class="destination">
+            <h2>Popular Destinations</h2>
+
+            <div class="showcases">
+
+                <!--Bethlehem card-->
+                <div class="showcase">
+                    <img src="Images/Bethehem.jpg" alt="Bethehem"> <!--Destination's image-->
+
+                    <h3>Bethlehem</h3> <!--Name of the place-->
+
+                    <p>The Birthplace of Jesus Christ,known for the Nativity story. </p> <!--Short description-->
+
+                    <a href="packages.html"><button>Learn More</button></a> <!--Linking to package page-->
+
+                </div>
+
+                <div class="showcase">
+                    <img src="Images/Nazareth.jpg" alt="Nazareth"> <!--Destination's image-->
+
+                    <h3>Nazareth</h3> <!--Name of the place-->
+
+                    <p>The town where Jesus grew up and lived most of his early life.</p> <!--Short description-->
+
+                    <a href="packages.html"><button>Learn More</button></a> <!--Linking to package page-->
+
+                </div>
+
+                <div class="showcase">
+
+                    <img src="Images/Jerusalem.jpg" alt="Holy Tour"> <!--Destination's image-->
+
+                    <h3>Holy Tour</h3> <!--Name of the place-->
+
+                    <p>10 nights across Jerusalem, Bethlehem, Nazareth and the Sea of Galilee</p> <!--Short description-->
+
+                    <a href="dedicated_tour.html"><button>Learn More</button></a> <!--Linking to Holy tour page-->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--3 reason's as to why the user should book with us-->
+        <section class="why_us">
+
+            <h2>Why Choose Us?</h2>
+
+            <div class="why_boxes">
+
+                <div class="why_box">
+
+                    <h3>Affordable Prices</h3>
+
+                    <p>Great Travel experiences at affordable prices.</p> <!--Value pitch-->
+
+                </div>
+
+                <div class="why_box">
+
+                    <h3>24/7 Support</h3>
+
+                    <p>Our Support team is always available.</p> <!--Always on support-->
+
+                </div>
+
+                <div class="why_box">
+
+                    <h3>Trusted Service</h3>
+
+                    <p>Thousands of happy travelers every year</p> <!--Social proof-->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Customer Reviews section-->
+        <section class="reviews">
+
+            <h2>Customer Reviews</h2>
+
+            <div class="reviews_container">
+
+                <!--First review-->
+                <div class="review">
+
+                    <p>"I honestly did not know what to expect from my first pilgrimage,but Christ Travels made the
+                        entire experience seamless from start to finish. The guides were incredibly knowledgeable about
+                        the biblical history of every site we visited. Walking the Via Dolorosa and standing at the
+                        Garden
+                        of Gethsemane was something I will never forget. Worth every penny"</p>
+
+                    <h4>-Sarah</h4> <!--Reviewer's name-->
+
+                </div>
+
+                <!--Second review-->
+                <div class="review">
+
+                    <p>"Booked the Jerusalem package for myself and my wife and it exceeded every expectation. The hotel
+                        was
+                        great,the Group was friendly, and the itinerary was perfectly balanced. Christ Travels clearly
+                        put
+                        a lot of thought into every detail. We are already planning to book the jordan package next
+                        year."</p>
+
+                    <h4>-Daniel</h4> <!--Reviewer's name-->
+
+                </div>
+
+                <!--Third review-->
+                <div class="review">
+
+                    <p>"I was nervous about travelling solo but the team made sure I never felt alone. The guided tours
+                        of Bethlehem and Nazareth were the highlight of my trip. I came back feeling spiritually
+                        refreshed
+                        in a way I never expected. Would highly recommend to anyone considering it."</p>
+
+                    <h4>-Jewish</h4> <!--Reviewer's name-->
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Email subscription section to join our community-->
+        <section class="join_coms">
+
+            <div class="join_com">
+
+                <div class="join_com_text">
+
+                    <span class="join_com_tag">Join Our Community</span> <!--Tag above the heading-->
+
+                    <h2>Never Miss a Deal</h2> <!--Heading-->
+
+                    <p>Join Thousands of travellers who get exclusive package deals, early-bird offers, and sacred
+                        journey inspiration delivered straight to their inbox </p> <!--Selling line i suppose-->
+                </div>
+
+                <div class="join_com_form">
+                    <div class="info_input">
+                        <input type="email" id="emailInput" placeholder="Enter your Email Address"> <!--Email box-->
+                        <button onclick="subscribe()">Subscribe</button> <!--Starts the subscribe() on click-->
+                        <p id="subscribeMsg"></p> <!--Shows success or error msg here-->
+
+                    </div>
+
+                    <p class="join_com_note">No Spam. Unsubscribe anytime.</p> <!--Reassures them that we are not a spamy type company-->
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+
+        <div class="footers">
+
+            <p class="footer_name">Christ Travels</p> <!--Brand Name-->
+
+            <p>Sacred journeys for every believer</p> 
+
+        </div>
+
+        <!--Social media links with their icons-->
+        <div class="social_media">
+
+            <h4>Follow Us</h4>
+
+            <div class="social_media_icons">
+
+                <!--FaceBook-->
+                <a href="#" class="social_media_icon" title="Facebook"><img src="Images/Facebook.png" alt="Facebook">
+
+                    @ChristTravels
+                </a>
+
+                <!--Instagram-->
+                <a href="#" class="social_media_icon" title="Instagram"><img src="Images/Instagram.png" alt="Instagram">
+
+                    @Christ.Travels
+
+                </a>
+
+                <!--X-->
+                <a href="#" class="social_media_icon" title="X"><img src="Images/X.png" alt="X">
+
+                    @ChristTravels
+
+                </a>
+
+                <!--Youtube-->
+                <a href="#" class="social_media_icon" title="YouTube"><img src="Images/YouTube.png" alt="YouTube">
+
+                    @Christ Travels Official
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="last">
+
+            <p>&copy; 2026 Christ Travels. All rights reserved</p> <!--Copyright-->
+
+        </div>
+
+    </footer>
+
+    <!--Butoon to scroll back to the top-->
+    <button id="scrollTop" onclick="scrollToTop()">Top</button>
+
+    <!--Links my java file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
