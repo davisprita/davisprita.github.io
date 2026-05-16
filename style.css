@@ -79,7 +79,7 @@ body {
 .guest {
     margin-top: 10px;
     background-color: white;
-    color: darkslategray;
+    color: black;
 }
 
 /*Hover effects for guest button*/
@@ -623,6 +623,7 @@ footer p {
 .tour_overview {
     padding: 50px 20px;
     background-color: whitesmoke;
+    text-align: center;
 }
 
 .tour_overview h2 {
@@ -664,6 +665,7 @@ footer p {
 .tour_includes {
     padding: 50px 20px;
     background-color: antiquewhite;
+    text-align: center;
 }
 
 .tour_includes h2 {
